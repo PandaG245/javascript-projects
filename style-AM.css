@@ -30,3 +30,7 @@ color:aqua
 h1 {
     text-decoration: underline;
 }
+
+#light-on,#light-off {
+display: none;
+}

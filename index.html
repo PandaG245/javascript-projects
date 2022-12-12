@@ -24,8 +24,8 @@
 			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 			  <li><a href="index.html" class="nav-link px-2 text-secondary">Home</a></li>
 			  <li><a href="about-me.html" class="nav-link px-2 text-white">About Me</a></li>
-			  <li><a href="#" class="nav-link px-2 text-white">#</a></li>
 			  <li><a href="#movies" class="nav-link px-2 text-white">Movies</a></li>
+			  <li><a href="calc.html" class="nav-link px-2 text-white">Calculator</a></li>
 			</ul>
 		  </div>
 		</div>
@@ -209,6 +209,44 @@ VS
 <br>
 
 <div id="movies"></div>
+
+<center>
+	<h1>חיפוש בגוגל</h1>
+    <button onclick="googleSearch()">חפש בגוגל</button>
+    <input type="text" id="search" placeholder="חיפוש בגוגל" style="text-align:right;">
+</center>
+<br>
+<br>
+<br>
+<center>
+	<input type="number" id="num_1"> *
+	<input type="number" id="num_2">
+	<button onclick="myFunction(document.getElementById('num_1').value,document.getElementById('num_2').value)">x * y</button>
+	<br>
+	<br>
+	<br>
+	<button id="btn_change_color" onclick="changeColor(true)">change color</button>
+	<button id="btn_change_color" onclick="changeColor(false)">change color</button>
+</center>
+
+<center>
+	<!-- lesson 18 - rock paper scissors -->
+    <div class="rps-card">
+		<h3>משחק אבן נייר ומספריים</h3>
+		<h4 id="result"></h4>
+		<h4>המחשב</h4>
+		<img src="paper.png" id="computer">
+		<h4>אתה</h4>
+		<img src="rock.png" id="you">
+		<hr>
+		<button onclick="rps('0')" class="btn btn-success">מספריים</button>
+		<button onclick="rps('1')" class="btn btn-primary">נייר</button>
+		<button onclick="rps('2')" class="btn btn-danger">אבן</button>
+		<br>
+		<br>
+	  </div>
+</div>
+</center>
 
 
 </body>

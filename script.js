@@ -237,10 +237,202 @@ function sendEmail() {
 
 }
 
+function myFunction(x, y) {
+
+  let result = x * y;
+  return alert(`the result is = ${result}`);
+}
+
+function changeColor(isChanged) {
+
+if(isChanged == true) {
+document.getElementById('btn_change_color').style = "background-color: green";
+}
+
+else if (isChanged == false){
+return document.getElementById('btn_change_color').style = "background-color: red";
+}
+}
+
+function checkLight(light){
+
+if (light == true) {
+  document.getElementById('light-on').style = "display: block"
+  document.getElementById('light-off').style = "display: none"
+}
+
+  else if (light == false){
+    document.getElementById('light-off').style = "display: block"
+  document.getElementById('light-on').style = "display: none"
+  }
+
+}
+
+// let question = prompt('Enter A Number From 1 - 9');
+
+// switch (question) {
+//     case '0':
+//         alert('your number is 0');
+//         break;
+
+//     case '1':
+//         alert('your number is 1');
+//         break;
+
+//     case '2':
+//         alert('your number is 2');
+//         break;
+
+//     case '3':
+//         alert('your number is 3');
+//         break;
+
+//     case '4':
+//         alert('your number is 4');
+//         break;
+
+
+//     case '5':
+//         alert('your number is 5');
+//         break;
+
+
+//     case '6':
+//         alert('your number is 6');
+//         break;
+
+//     case '7':
+//         alert('your number is 7');
+//         break;
+
+//     case '8':
+//         alert('your number is 8');
+//         break;
+
+//     case '9':
+//         alert('your number is 9');
+//         break;
+
+//     case '555':
+//         alert('👁️');
+//         break;
+
+//     default:
+//         alert('Type A Number Please...');
+//         break;
+
+// }
+
+
+function game() {
+    let question2 = prompt("Seller: Would you like to buy pizza? Yes / No");
+
+    switch (question2) {
+        case "Yes": case "yes":
+            alert("Buyer: Yes, I want to buy a pizza!");
+            alert("Seller: The pizza is now in the oven, please wait 5 seconds...");
+            setTimeout(() => {
+                alert("Seller: There you go, Enjoy your pizza!");
+                alert("Buyer: Thank you sir, I'll come back again !!");
+            }, 5000);
+            break;
+
+        case "No": case "no":
+            alert("Buyer: Nahhh I Dont WANT!!");
+            alert("Seller: OK SIR HAVE A GOOD DAY!");
+            break;
+
+        default:
+            alert("Seller: What Are You Saying?");
+            game();
+            break;
+    }
+}
+
+// שיעור 18
+
+//Math.round(number) - פונקציה שמעגלת למספר השלם הקרוב ביותר
+console.log(Math.round(6.3245645)); // => 6
+console.log(Math.round(6.8245645)); // => 7
+//Math.ceil() - מעגל כלפי מעלה
+//Math.floor() - מעגל כלפי מטה
+
+// Math.PI
+console.log(Math.PI); // PI => value
+
+// random numbers Math.random()
+//step 1
+let random1 = Math.random(); // 0.0 || 1.0
+console.log(random1);
+
+//step 2
+let random2 = Math.random() * 1000; // 0.0 || 1000.0
+console.log(random2);
+
+//step 3
+let random3 = Math.round(Math.random() * 1000); // 0 || 1000 - מחזיר מספר רנדומלי שלם
+console.log(random3);
+
+// rps game
+function rps(choice) {
+
+  let details = ['scissors.png', 'paper.png', 'rock.png']; // details[2] => rock.png
+  let random = Math.floor(Math.random() * details.length); // 0 // 2 // 2 // 1
+
+  document.getElementById('you').src = details[choice];
+  document.getElementById('computer').src = details[random];
+
+  if (choice == random) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-warning">תיקו</div> ';
+  }
+
+  if (choice == 0 && random == 1) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-success">! ניצחת</div> ';
+  }
+
+  if (choice == 0 && random == 2) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-danger">הפסדת</div> ';
+  }
+
+  if (choice == 1 && random == 0) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-danger">הפסדת</div> ';
+  }
+
+  if (choice == 1 && random == 2) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-success">! ניצחת</div> ';
+  }
+
+  if (choice == 2 && random == 0) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-success">! ניצחת</div> ';
+
+  }
+  if (choice == 2 && random == 1) {
+      document.getElementById('result').innerHTML = '<div class="alert alert-danger">הפסדת</div> ';
+  }
+}
 
 
 
 
+function add (val){
+document.getElementById('screen').value += val;
+}
 
+function clr(){
+  document.getElementById('screen').value = '';
+}
 
+function solve(){
+  let x = document.getElementById('screen').value;
+   
+  let answer = Function("return " + x)();
 
+  document.getElementById('screen').value = answer
+}
+
+function googleSearch(){
+    
+  let search = document.getElementById('search').value; 
+  
+  window.location.href = `https://www.google.com/search?q=${search}`;
+}

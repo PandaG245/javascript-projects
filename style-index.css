@@ -82,3 +82,9 @@ width: 250px;
        background-color: rgb(0, 255, 255);  
         color:whitesmoke;
     }
+
+    .rps-card {
+        border: solid gray 1px;
+        width: 350px;
+        border-radius: 5px;
+    }

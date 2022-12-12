@@ -31,6 +31,7 @@
 			  <li><a href="index.html" class="nav-link px-2 text-secondary">Home</a></li>
 			  <li><a href="about-me.html" class="nav-link px-2 text-white">About Me</a></li>
 			  <li><a href="index.html#movies" class="nav-link px-2 text-white">Movies</a></li>
+        <li><a href="calc.html" class="nav-link px-2 text-white">Calculator</a></li>
 			</ul>
 		  </div>
 		</div>
@@ -67,11 +68,28 @@
     <br>
     <h5 style="display:none;" id="sent-success"> ההודעה נשלחה בהצלחה! אצור איתך קשר בהקדם</h5>
     <br>
+
+<button onclick="myFunction(100,5)">x * y</button>
+
 <div class="links">
 <a id="whatsapp" href="tel:+972506610569"><i class="fab fa-whatsapp fa-5x" target="_blank"></i></a>
  <a id="instagram" href="https://www.instagram.com/guym245/?hl=en" target="_blank"><i class="fab fa-instagram fa-5x"></i></a>
  <a id="discord" href="https://discord.gg/KUUkpxuQ" target="_blank"><i class="fab fa-discord fa-5x"></i></a>
 </div>
+</center>
+
+<br>
+<br>
+
+<center>
+  <button id="btn-light-on" onclick="checkLight(true)">Light on</button>
+  <button id="btn-light-off" onclick="checkLight(false)">Light off</button>
+<br>
+<br>
+<img src="light-on.png" id="light-on">
+<img src="light-off.png" id="light-off">
+<br>
+<button onclick="game()">Pizza</button>
 </center>
 
 </body>
